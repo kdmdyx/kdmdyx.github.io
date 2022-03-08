@@ -75,8 +75,8 @@
   
     <article id="post-Github Page Setup with Hexo" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/03/04/Github%20Page%20Setup%20with%20Hexo/" class="article-date">
-  <time class="dt-published" datetime="2022-03-04T06:33:02.000Z" itemprop="datePublished">2022-03-04</time>
+    <a href="/2022/03/08/Github%20Page%20Setup%20with%20Hexo/" class="article-date">
+  <time class="dt-published" datetime="2022-03-07T16:00:00.000Z" itemprop="datePublished">2022-03-08</time>
 </a>
     
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/04/Github%20Page%20Setup%20with%20Hexo/">Github Page Setup with Hexo</a>
+      <a class="p-name article-title" href="/2022/03/08/Github%20Page%20Setup%20with%20Hexo/">Github Page Setup with Hexo</a>
     </h1>
   
 
@@ -112,14 +112,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="The-procedures-involves-3-major-steps"><a href="#The-procedures-involves-3-major-steps" class="headerlink" title="The procedures involves 3 major steps:"></a>The procedures involves 3 major steps:</h2><p>This guide assumes its reader has some exposure with bash shell&#x2F;command line interface and Github. The original environment used here is Windows 11. Other OS should also be able to follow along, since most work is done through UNIX shell commands.   </p>
-<h2 id="Tools"><a href="#Tools" class="headerlink" title="Tools"></a>Tools</h2><p>The components involved in this guide are the following:  </p>
+<p>The procedures involves 3 major steps:</p>
 <ul>
-<li>Windows Subsytem for Linux or WSL (not needed for Mac&#x2F;Linux users)</li>
-<li>Git</li>
-<li>Node.js</li>
-<li>Hexo</li>
+<li>Setup Local Environment</li>
+<li>Build and Test Locally</li>
+<li></li>
 </ul>
+<p>This guide assumes its reader has some exposure with bash shell&#x2F;command line interface and Github. The original environment used here is Windows 11. Other OS should also be able to follow along, since most work is done through UNIX shell commands.   </p>
 <h2 id="Part-I-Setup-Local-Environment"><a href="#Part-I-Setup-Local-Environment" class="headerlink" title="Part I: Setup Local Environment"></a>Part I: Setup Local Environment</h2><h3 id="Install-Windows-Subsystem-for-Linux-WSL"><a href="#Install-Windows-Subsystem-for-Linux-WSL" class="headerlink" title="Install Windows Subsystem for Linux (WSL)"></a>Install Windows Subsystem for Linux (WSL)</h3><p>For starters we are going to need Windows Subsystem for Linux(WSL). <strong>Non-Windows user can skip this part.</strong></p>
 <ul>
 <li>Open Windows command line and run <code>wsl --install</code> in the prompt</li>
@@ -154,7 +153,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Part-II-Building-and-Testing-Locally"><a href="#Part-II-Building-and-Testing-Locally" class="headerlink" title="Part II: Building and Testing Locally"></a>Part II: Building and Testing Locally</h2><h3 id="Create-Local-Site-with-Hexo"><a href="#Create-Local-Site-with-Hexo" class="headerlink" title="Create Local Site with Hexo"></a>Create Local Site with Hexo</h3><p>In this step we generate a bare-bone site locally using Hexo, which can be deployed online later.</p>
+<h2 id="Part-II-Build-and-Test-Locally"><a href="#Part-II-Build-and-Test-Locally" class="headerlink" title="Part II: Build and Test Locally"></a>Part II: Build and Test Locally</h2><h3 id="Create-Local-Site-with-Hexo"><a href="#Create-Local-Site-with-Hexo" class="headerlink" title="Create Local Site with Hexo"></a>Create Local Site with Hexo</h3><p>In this step we generate a bare-bone site locally using Hexo, which can be deployed online later.</p>
 <ul>
 <li>In <strong>bash</strong>, navigate to a folder of your choice for your new web page files.<ul>
 <li>For windows users, you may also navigate in file explorer, then type <code>bash</code> in the address bar near top then hit “Enter” to launch <strong>bash</strong> directly there.</li>
@@ -183,7 +182,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="Part-III-Deploy-Page"><a href="#Part-III-Deploy-Page" class="headerlink" title="Part III: Deploy Page"></a>Part III: Deploy Page</h2><p>Hexo has a simple one-command deployment support for Github Page.</p>
+<h3 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h3><p>Hexo has a simple one-command deployment support for Github Page.</p>
 <ul>
 <li>Run command <code>npm install hexo-deployer-git --save</code> to install the once command deployer helper</li>
 <li>Edit <strong>_config.yml</strong> in hexo generated folder<ul>
@@ -196,8 +195,10 @@
 <li>Deploy to Github Page with <code>hexo deploy</code></li>
 </ul>
 <p>Voila! Your Github Page is live. Go to <github_username>.github.io in a browser to view. It might take a minute for the page to update.</p>
-<h2 id="Part-IV-Update-Page"><a href="#Part-IV-Update-Page" class="headerlink" title="Part IV: Update Page"></a>Part IV: Update Page</h2><ul>
-<li>Again, the <a href="">official Hexo guide</a> has a lot more options to customize your page. Here I will only list the essential commands you need:<ul>
+<h2 id="What-Now"><a href="#What-Now" class="headerlink" title="What Now?"></a>What Now?</h2><ul>
+<li>The <a target="_blank" rel="noopener" href="https://hexo.io/docs/">official Hexo guide</a> has a lot more options to customize your page.</li>
+<li>The essential workflow with Hexo looks like:<ul>
+<li>Edit some files.</li>
 <li><code>hexo generate</code> to generate static files after editing.</li>
 <li><code>hexo server</code> to launch a local version for quick preview.</li>
 <li><code>hexo clean</code> for house keeping before deployment.</li>
@@ -210,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://kdmdyx.github.io/2022/03/04/Github%20Page%20Setup%20with%20Hexo/" data-id="cl0hx2heo00005aw6f2fp4k55" data-title="Github Page Setup with Hexo" class="article-share-link">Share</a>
+      <a data-url="http://kdmdyx.github.io/2022/03/08/Github%20Page%20Setup%20with%20Hexo/" data-id="cl0hxmvah000064w67mov6ust" data-title="Github Page Setup with Hexo" class="article-share-link">Share</a>
       
       
       
@@ -253,7 +254,7 @@
       <ul>
         
           <li>
-            <a href="/2022/03/04/Github%20Page%20Setup%20with%20Hexo/">Github Page Setup with Hexo</a>
+            <a href="/2022/03/08/Github%20Page%20Setup%20with%20Hexo/">Github Page Setup with Hexo</a>
           </li>
         
       </ul>
